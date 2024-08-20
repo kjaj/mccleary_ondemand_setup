@@ -1,0 +1,25 @@
+# do this part on the HPC 
+# give yourself some memory to do this task 
+
+srun --pty --mem=10g --time=06:00:00 -p devel bash
+
+# load miniconda 
+
+ml miniconda
+
+# make the environment - you can name it whatever you want. see also https://docs.ycrc.yale.edu/clusters-at-yale/guides/r/#conda-based-r-environments 
+conda create --name r_env_ood r-base=4.2 r-essentials
+
+# install rstudio-desktop into the environment, say 'y' to any 'proceed?' questions
+
+conda install -n r_env_ood -c conda-forge rstudio-desktop
+
+# note - this took ~20 min to complete using 30g memory in devel so dont worry if it takes a while 
+
+# unload miniconda 
+
+module unload miniconda 
+
+# update (to tell OnDemand where this environment is/ that it exists now)
+
+ycrc_conda_env.sh update
