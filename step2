@@ -1,0 +1,15 @@
+# Step 2. Web browser part: open a web browser & go to 
+# https://ood-mccleary.ycrc.yale.edu/pun/sys/dashboard/ 
+# (requires netID login, and I think VPN)
+
+# select RStudio Desktop
+
+# select your conda environment you just made from the drop-down menu
+
+# set any memory requirements you want 
+
+# hit LAUNCH
+
+# you can observe your job in the queue on McCleary (terminal)
+
+squeue --me
